@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>✨ Track Your Tasks</title>
+    <!-- Modern CSS reset -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <!-- App Header -->
+        <header class="header">
+            <div class="header-content">
+                <h1 class="app-title">✨ Track Your Tasks</h1>
+                <p class="welcome-text" id="welcomeText">Let's make today productive!</p>
+            </div>
+            
+            <!-- Progress Section -->
+            <div class="progress-section">
+                <div class="stats">
+                    <div class="stat-box">
+                        <span id="totalTasks" class="stat-number">0</span>
+                        <span class="stat-label">Total Tasks</span>
+                    </div>
+                    <div class="stat-box">
+                        <span id="completedTasks" class="stat-number">0</span>
+                        <span class="stat-label">Completed</span>
+                    </div>
+                </div>
+                <div class="progress-bar">
+                    <div id="progressFill" class="progress-fill"></div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Task Input -->
+            <div class="input-section">
+                <div class="input-wrapper">
+                    <input 
+                        type="text" 
+                        id="taskInput" 
+                        class="task-input" 
+                        placeholder="What's your next goal?"
+                        maxlength="100"
+                        autocomplete="off"
+                    >
+                    <button id="addTaskBtn" class="add-button">
+                        <span class="add-icon">+</span>
+                        <span class="add-text">Add Task</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Task Filters -->
+            <div class="filter-section">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="active">Active</button>
+                <button class="filter-btn" data-filter="completed">Completed</button>
+            </div>
+
+            <!-- Tasks List -->
+            <div class="tasks-container">
+                <ul id="tasksList" class="tasks-list"></ul>
+                
+                <!-- Empty State -->
+                <div id="emptyState" class="empty-state">
+                    <div class="empty-icon">🎯</div>
+                    <h3>Ready to Begin</h3>
+                    <p>Add your first task to start tracking your progress!</p>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p id="motivationalText" class="footer-text">Every task completed is a step forward!</p>
+        </footer>
+    </div>
+
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
